@@ -1,0 +1,13 @@
+image: node:7.9.0
+
+pipelines:
+  default:
+    - step:
+        script: 
+          - npm install
+          - npm install -g gulp
+          - mkdir conf
+          - cp ci/lambda-config.js conf
+          - gulp deploy
+
+  

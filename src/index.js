@@ -2,6 +2,7 @@
 
 import Alexa from 'alexa-sdk'
 import axios from 'axios'
+import MessageUtils from 'utils/MessageUtils'
 
 const INVOCATION_NAME = process.env.INVOCATION_NAME || "Sonos Intercom";
 const APP_ID = process.env.APP_ID;
@@ -32,6 +33,8 @@ const handlers = {
     'BroadcastMessageIntent': function(){
         let slots = this.event.request.intent.slots;
         let message = slots.Message.value;
+        message = MessageUtils.sanitizeMessage(message);
+
         const SONOS_API_SERVER = process.env.SONOS_API_SERVER;
         const AUTH_USERNAME = process.env.AUTH_USERNAME;
         const AUTH_PASSWORD = process.env.AUTH_PASSWORD;

@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/davidmerrick/alexa-sonos-intercom.svg?branch=master)](https://travis-ci.org/davidmerrick/alexa-sonos-intercom)
+
 Alexa skill that broadcasts messages via a Sonos system.
 
 # Requirements

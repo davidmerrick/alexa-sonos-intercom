@@ -47,12 +47,14 @@ const handlers = {
 
         axios.get(`${SONOS_API_SERVER}/say/${message}`, options)
             .then(response => {
-                console.log("SUCCESS.");
+                console.log("SUCCESS: broadcasted message.");
                 this.emit(':tell', `Done.`);
+                return;
             })
             .catch(err => {
                 console.error(err);
                 this.emit(':tell', "Error occurred broadcasting message");
+                return;
             });
     }
 };

@@ -45,7 +45,7 @@ const handlers = {
             auth: auth
         };
 
-        axios.get(`${SONOS_API_SERVER}/say/${message}`, options)
+        axios.get(`${SONOS_API_SERVER}/sayall/${message}`, options)
             .then(response => {
                 console.log("SUCCESS: broadcasted message.");
                 this.emit(':tell', `Done.`);

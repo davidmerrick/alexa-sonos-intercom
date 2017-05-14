@@ -1,3 +1,1 @@
 BroadcastMessageIntent {slot value|Message}
-BroadcastMessageIntent broadcast {slot value|Message}
-BroadcastMessageIntent broadcast message {slot value|Message}
